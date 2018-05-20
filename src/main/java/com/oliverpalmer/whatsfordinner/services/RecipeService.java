@@ -23,12 +23,19 @@ public class RecipeService {
     public RecipeService(RecipeRepository recipeRepository) {
         /*Recipe r = new Recipe(
                 UUID.randomUUID().toString(),
-                "beef",
+                "beef pie",
+                new ArrayList<>(Arrays.asList(new Ingredient("bouf", 400, "kg"))),
+                new ArrayList<>(Arrays.asList("Cook bouf", "profit"))
+        );
+        Recipe r2 = new Recipe(
+                UUID.randomUUID().toString(),
+                "cat stew",
                 new ArrayList<>(Arrays.asList(new Ingredient("bouf", 400, "kg"))),
                 new ArrayList<>(Arrays.asList("Cook bouf", "profit"))
         );*/
         this.recipeRepository = recipeRepository;
         //this.recipeRepository.save(r);
+        //this.recipeRepository.save(r2);
     }
 
     public List<Recipe> getAll() {

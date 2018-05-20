@@ -11,13 +11,17 @@ public class Recipe {
 
     @Id
     private String id;
-    private String recipeName;
+    private String name;
     private List<Ingredient> ingredients;
     private List<String> instructions;
 
-    public Recipe(String id, String recipeName, List<Ingredient> ingredients, List<String> instructions) {
+    public Recipe() {
+        // Default constructor for deserialization
+    }
+
+    public Recipe(String id, String name, List<Ingredient> ingredients, List<String> instructions) {
         this.id = id;
-        this.recipeName = recipeName;
+        this.name = name;
         this.ingredients = ingredients;
         this.instructions = instructions;
     }
@@ -30,12 +34,12 @@ public class Recipe {
         this.id = id;
     }
 
-    public String getRecipeName() {
-        return recipeName;
+    public String getName() {
+        return name;
     }
 
-    public void setRecipeName(String recipeName) {
-        this.recipeName = recipeName;
+    public void setName(String name) {
+        this.name = name;
     }
 
     public List<Ingredient> getIngredients() {

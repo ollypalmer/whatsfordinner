@@ -9,6 +9,10 @@ public class Ingredient {
     private int quantity;
     private String units;
 
+    public Ingredient() {
+        // Default constructor for deserialization
+    }
+
     public Ingredient(String name, int quantity, String units) {
         this.name = name;
         this.quantity = quantity;
